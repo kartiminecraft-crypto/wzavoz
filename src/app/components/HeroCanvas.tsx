@@ -174,7 +174,7 @@ function Scene({
           let fillFraction = 0.75;
           const isMobile = window.innerWidth < 768;
           if (isMobile && activeModel === 'Fence') {
-            fillFraction = 0.35; // Make the fence much smaller on mobile screens
+            fillFraction = 0.28; // Fence size on mobile
           }
           
           // Apply facing rotation BEFORE fitObject so the bbox is computed on
@@ -186,9 +186,9 @@ function Scene({
           // Adjust the vertical position based on the active model
           if (activeModel === 'Fence') {
             if (isMobile) {
-              modelScene.position.y -= scaledHeight * 0.1;
+              modelScene.position.y += scaledHeight * 0.08;
             } else {
-              modelScene.position.y -= scaledHeight * 0.25;
+              modelScene.position.y += scaledHeight * 0.05;
             }
           } else if (activeModel === 'Paul') {
             modelScene.position.y += 0; // Paul is already centered
